@@ -1,10 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/01a888fec1.js" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
     <meta charset="UTF-8">
-    <title>Cart</title>
+    <title>Cart</title> <!--Got lazy in this part of the lab.-->
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="../static/css/logo.png" id="logo" class="d-inline-block align-top" alt="ebay logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" id="nav-button" href="{{url_for('home')}}">Home</a>
+            <a class="nav-item nav-link active" id="nav-button" href="{{url_for('product')}}">Products</a>
+            <a class="nav-item nav-link active" id="nav-button" href="{{url_for('cart')}}">Cart</a>
+          </div>
+        </div>
+      </nav>
+      <h1>Shopping Cart</h1>
 
+<div class="shopping-cart">
+
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Remove</label>
+    <label class="product-line-price">Total</label>
+  </div>
+
+
+  <div class="product">
+    <div class="product-image">
+        <img src="../static/css/monkey-pizza.gif" alt="Monkey taking pizza delivery">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Mailwife</div>
+      <p class="product-description">Who doesn't need a monkey to take their mail and deliveries for them?</p>
+    </div>
+    <div class="product-price">74.99</div>
+    <div class="product-quantity">
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">74.99</div>
+  </div>
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">74.99</div>
+    </div>
+    <div class="totals-item">
+      <label>Tax (5%)</label>
+      <div class="totals-value" id="cart-tax">3.60</div>
+    </div>
+    <div class="totals-item">
+      <label>Shipping</label>
+      <div class="totals-value" id="cart-shipping">15.00</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">93.59</div>
+    </div>
+  </div>
+
+  <button class="checkout">Checkout</button>
+
+</div>
 </body>
 </html>

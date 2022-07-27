@@ -1,3 +1,4 @@
+from pickle import READONLY_BUFFER
 from flask import Flask, redirect, request, render_template, url_for
 
 
@@ -12,6 +13,14 @@ app = Flask(  # Create a flask app
 @app.route('/')
 def home():
     return render_template('home.html')
+
+@app.route('/product')
+def product():
+    return render_template('product.html')
+
+@app.route('/cart')
+def cart():
+    return render_template('cart.html')
 
 
 # Your code should be above

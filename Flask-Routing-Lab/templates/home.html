@@ -19,43 +19,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" id="nav-button" href="#">Home</a>
-            <a class="nav-item nav-link" id="nav-button" href="#">Cart</a>
-           <!-- <a class="nav-item nav-link disabled" id="nav-button" href="#">Disabled</a> -->
+            <a class="nav-item nav-link active" id="nav-button" href="{{url_for('home')}}">Home</a>
+            <a class="nav-item nav-link active" id="nav-button" href="{{url_for('product')}}">Products</a>
+            <a class="nav-item nav-link active" id="nav-button" href="{{url_for('cart')}}">Cart</a>
           </div>
         </div>
       </nav>
-      <div class="row w-75">
-        <div class="col-2">
-          <div id="simple-list" class="d-flex flex-column gap-2 simple-list-scrollspy text-center">
-            <a class="btn-outline-info" href="#simple-list-item-1">Monke Taxi</a>
-            <a class="btn-outline-info" href="#simple-list-item-2">Mailwife</a>
-            <a class="btn-outline-info" href="#simple-list-item-3">Jinx</a>
-            <a class="btn-outline-info" href="#simple-list-item-4">Shalev</a>
-          </div>
-        </div>
-        <div class="col-8">
-          <div data-bs-spy="scroll" data-bs-target="#simple-list" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
-            <h4 id="simple-list-item-1">Monke taxi</h4>
-            <div class="container">
-            <img src="../static/css/download.png" alt="monke taxi" class="img-fluid">
-            </div> <!-- end of container -->
-            <h4 id="simple-list-item-2">Mailwife</h4>
-            <div class="container">
-            <img src="../static/css/monkey-pizza.gif" alt="mailwife" class="img-fluid">
-            </div> <!-- end of container -->
-            <h4 id="simple-list-item-3">Jinx</h4>
-            <div class="container">
-            <img src="../static/css/jinx.jpg" alt="jinx" class="img-fluid">
-            </div> <!-- end of container -->
-            <h4 id="simple-list-item-4">Shalve</h4>
-            <div class="container">
-            <img src="../static/css/shalev.png" alt="shalve" class="img-fluid">
-            </div> <!-- end of container -->
-          </div>
-        </div>
       </div>
-      <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button"><i class="fa-solid fa-chevron-up"></i></a>
       
 </body>
 </html>
